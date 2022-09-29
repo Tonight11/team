@@ -600,3 +600,25 @@ a {
 	width: 200px;
 	z-index: -20;
 }
+
+.swiper {
+	position: static;
+	margin: 0;
+}
+
+.swiper-wrapper {
+	max-width: 400px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	top: 93%;
+}
+
+.swiper-button-prev {
+	left: -2.5%;
+}
+
+.swiper-button-next {
+	left: 9%;
+}
