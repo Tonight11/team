@@ -8,10 +8,13 @@
 }
 
 .bg-img {
-    height: 100vh;
+    height: fit-content;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
 }
 
 .bg-img:after {
@@ -62,6 +65,14 @@
     line-height: 45px;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+body {
+    background-image: url("img/1.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 100vh;
 }
 
 .section input {
