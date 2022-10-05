@@ -19,3 +19,23 @@ if (burger) {
 		iconMenu.classList.toggle('active');
 	});
 }
+
+let current;
+let bg = document.querySelector('.header');
+let btnSwip = document.querySelectorAll('.btn-swiper');
+
+btnSwip.forEach(i => {
+	i.addEventListener('click', e => {
+		current = +document.querySelector('.swiper-pagination-current')
+			.innerText;
+		const target = e.target;
+		console.log(current);
+		if (current == 1) {
+			bg.style.backgroundImage = "url('../img/1.jpg')";
+		} else if (current == 2) {
+			bg.style.backgroundImage = "url('../img/bg2.jpg')";
+		} else {
+			bg.style.backgroundImage = "url('../img/bg3.jpg')";
+		}
+	});
+});
