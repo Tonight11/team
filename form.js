@@ -35,6 +35,8 @@ form.addEventListener('submit', e => {
 		}),
 	})
 		.then(() => {
+			email_field.value = '';
+			pass_field.value = '';
 			load.style.display = 'none';
 			succes.style.opacity = '1';
 			succes.style.left = '0px';
