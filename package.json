@@ -1,0 +1,32 @@
+{
+	"name": "houseclass",
+	"version": "1.0.0",
+	"description": "team work with exa baxa",
+	"main": "main.js",
+	"scripts": {
+		"test": "parcel index"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Tonight11/team.git"
+	},
+	"keywords": [
+		"house",
+		"js",
+		"html",
+		"css"
+	],
+	"author": "Bayastan",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Tonight11/team/issues"
+	},
+	"homepage": "https://github.com/Tonight11/team#readme",
+	"dependencies": {
+		"password-validator": "^5.3.0",
+		"validator": "^13.7.0"
+	},
+	"devDependencies": {
+		"parcel": "^2.7.0"
+	}
+}

@@ -55,8 +55,6 @@
 	height: 45px;
 	width: 100%;
 	display: flex;
-	background: rgba(255, 255, 255, 0.94);
-	border-radius: 20px;
 }
 
 .section span {
@@ -79,12 +77,11 @@ body {
 	height: 100%;
 	width: 100%;
 	background: #f5ebeb;
-	border: none;
+	border: 2px solid rgba(255, 51, 51, 0);
 	outline: none;
 	text-align: center;
 	color: #222;
 	font-size: 18px;
-	border-radius: 20px;
 }
 .p {
 	padding-left: 30px;
@@ -102,6 +99,10 @@ body {
 	color: #222;
 	display: none;
 	cursor: pointer;
+}
+
+.pass {
+	border: 2px solid rgba(255, 51, 51, 0);
 }
 
 .pass:valid ~ .show {
@@ -124,6 +125,10 @@ body {
 .section button[type='submit']:hover {
 	background: #d052f690;
 	border: 1px solid #d052f690;
+}
+
+small {
+	color: red;
 }
 
 .login {
@@ -167,13 +172,4 @@ body {
 		top: 24px;
 		height: 32px;
 	}
-}
-
-.succes {
-	opacity: 0;
-	position: relative;
-	left: -50px;
-	transition: all 0.3s linear;
-	margin-top: 10px;
-	color: greenyellow;
 }

