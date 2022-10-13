@@ -173,3 +173,24 @@ small {
 		height: 32px;
 	}
 }
+.pop {
+    width: 200px;
+    height: 0px;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+    color: rgb(3, 3, 3, 0);
+    position: absolute;
+    text-align: center;
+    left: 43%;
+    top: 0;
+    border-radius: 0px 0px 10px 10px;
+    z-index: 1000;
+    transition: height 1s, color .1s .25s;
+}
+.active {
+    position: fixed;
+    height: 100px;
+    color: rgb(3, 3, 3, 1);
+}
