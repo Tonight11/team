@@ -26,7 +26,8 @@ const pass_er = document.querySelector('.pass-er');
 const showBtn = document.querySelector('.show');
 const form = document.querySelector('.form-submit');
 const load = document.querySelector('.lds-facebook');
-const succes = document.querySelector('.succes');
+const up = document.querySelector('.pop');
+const btmSubmit = document.getElementById('submit')
 
 showBtn.addEventListener('click', function () {
 	if (pass_field.type === 'password') {
@@ -87,8 +88,11 @@ form.addEventListener('submit', e => {
 			load.style.display = 'none';
 			email_field.style.borderColor = 'black';
 			email_er.innerText = '';
+			up.classList.add('active')
 
-			setTimeout(() => {}, 2500);
+			setTimeout(() => {
+				up.classList.remove('active')
+			}, 2500);
 		})
 		.catch(error => console.log(error));
 });
