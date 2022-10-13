@@ -89,7 +89,6 @@ form.addEventListener('submit', e => {
 			email_field.style.borderColor = 'black';
 			email_er.innerText = '';
 			up.classList.add('active')
-			console.log('did')
 			setTimeout(() => {
 				up.classList.remove('active')
 			}, 2500);

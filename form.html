@@ -5,13 +5,16 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Forms</title>
-		<link rel="stylesheet" href="forms.css" />
-		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="forms.css">
+		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<div class="pop" id="pop">
 		Thanks for registration
 	</div>
 	<body>
+		<div class="pop">
+			<p>Подтвердите сообщение на почте</p>
+		</div>
 		<header class="header">
 			<div class="container header__container">
 				<div class="header__co">
@@ -19,11 +22,58 @@
 						<div class="header__logo">
 							<a href="index.html">
 								<img
-									class="logo"
-									src="img/logo.svg"
-									alt="logo"
-								/>
+								class="logo"
+								src="img/logo.svg"
+								alt="logo"
+							/>
 							</a>
+						</div>
+						<div class="header__right">
+							<div class="nav header__right-child">
+								<nav class="nav__menu menu">
+									<div class="shadow__blur"></div>
+									<ul class="menu__body">
+										<li>
+											<a
+												class="menu__link"
+												href="form.html"
+												>Register</a
+											>
+										</li>
+										<li>
+											<a
+												class="menu__link"
+												data-scroll-to="section-garant"
+												>garanty</a
+											>
+										</li>
+										<li>
+											<a
+												class="menu__link"
+												data-scroll-to="section-we"
+												>about us</a
+											>
+										</li>
+
+										<li>
+											<a
+												class="menu__link"
+												data-scroll-to="section-much"
+												>homes price</a
+											>
+										</li>
+									</ul>
+								</nav>
+								<div class="burger">
+									<div class="shadow"></div>
+									<div class="menu__icon">
+										<span></span>
+									</div>
+								</div>
+							</div>
+							<div class="header__number header__right-child">
+								<a class="btn nav__btn">Contact</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -41,7 +91,6 @@
 							required
 							placeholder="Enter Email"
 						/>
-						<small class="em-er"></small>
 					</div>
 					<div class="section space">
 						<input
@@ -51,20 +100,17 @@
 							placeholder="Password"
 						/>
 						<span class="show">SHOW</span>
-						<small class="pass-er"></small>
 					</div>
-
-					<div class="section">
-						<button type="submit" value="LOGIN">LOGIN</button>
+					<button class="section" type="submit" id="submit">Register</button>
+					<div class="lds-facebook lds">
+						<div></div>
+						<div></div>
+						<div></div>
 					</div>
-				</form>
-				<div class="lds-facebook lds">
-					<div></div>
-					<div></div>
-					<div></div>
 				</div>
+				</form>
 			</div>
-		</div>
+		</header>
 	</body>
-	<script type="module" src="form.js"></script>
+	<script src="form.js"></script>
 </html>
