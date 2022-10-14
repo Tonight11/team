@@ -26,6 +26,12 @@
     background: rgba(255, 255, 255, 0.174);
 } */
 
+.form-submit {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
 small {
 	color: red;
 	font-size: 12px;
@@ -63,17 +69,13 @@ small {
 	width: 85%;
 }
 .section {
-	position: relative;
-	height: 45px;
-	width: 100%;
 	display: flex;
-	background: rgba(255, 255, 255, 0.94);
-	border-radius: 20px;
+	flex-direction: column;
+	gap: 3px;
 }
 
 .section span {
 	color: #222;
-	width: 40px;
 	line-height: 45px;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -88,6 +90,8 @@ small {
 	text-align: center;
 	color: #222;
 	font-size: 18px;
+	display: flex;
+	padding: 10px;
 }
 .p {
 	padding-left: 30px;
@@ -125,6 +129,8 @@ button[type='submit'] {
 	color: white;
 	display: flex;
 	align-items: center;
+	height: 45px;
+
 	justify-content: center;
 }
 

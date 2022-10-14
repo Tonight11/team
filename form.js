@@ -60,7 +60,7 @@ form.addEventListener('submit', e => {
 	}
 
 	if (
-		schema.validate(emailValue, { details: true }).length !== 0 &&
+		schema.validate(emailValue, { details: true }).length !== 0 ||
 		passSchema.validate(passValue, { details: true }).length !== 0
 	) {
 		return;
