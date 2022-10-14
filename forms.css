@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .bg-img {
-    height: fit-content;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-     /* position: absolute;
+	height: fit-content;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	/* position: absolute;
     top: 50%;
     left: 50%;  */
 }
@@ -26,133 +26,138 @@
     background: rgba(255, 255, 255, 0.174);
 } */
 
+small {
+	color: red;
+	font-size: 12px;
+}
+
 .content {
-    border-radius: 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 999;
-    text-align: center;
-    padding: 60px 32px;
-    width: 370px;
-    transform: translate(-50%, -50%);
-    background: rgba(255, 255, 255, 0.133);
-    border: 1px solid #fff;
-    backdrop-filter: blur(3px);
-    box-shadow: 0 0 6px 0 rgba(29, 29, 29, 0.203);
+	border-radius: 10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 999;
+	text-align: center;
+	padding: 60px 32px;
+	width: 370px;
+	transform: translate(-50%, -50%);
+	background: rgba(255, 255, 255, 0.133);
+	border: 1px solid #fff;
+	backdrop-filter: blur(3px);
+	box-shadow: 0 0 6px 0 rgba(29, 29, 29, 0.203);
 }
 
 .content header {
-    color: white;
-    font-size: 32px;
-    font-weight: 600;
-    margin: 0 0 35px 0;
+	color: white;
+	font-size: 32px;
+	font-weight: 600;
+	margin: 0 0 35px 0;
 }
 
 .header__inner {
-    max-width: 1090px;
-    display: flex;
-    justify-content: space-between;
+	max-width: 1090px;
+	display: flex;
+	justify-content: space-between;
 }
 .header__inner::before {
-    width: 85%;
+	width: 85%;
 }
 .section {
-    position: relative;
-    height: 45px;
-    width: 100%;
-    display: flex;
-    background: rgba(255, 255, 255, 0.94);
-    border-radius: 20px;
+	position: relative;
+	height: 45px;
+	width: 100%;
+	display: flex;
+	background: rgba(255, 255, 255, 0.94);
+	border-radius: 20px;
 }
 
 .section span {
-    color: #222;
-    width: 40px;
-    line-height: 45px;
-    padding-left: 10px;
-    padding-right: 10px;
+	color: #222;
+	width: 40px;
+	line-height: 45px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .section input {
-    height: 100%;
-    width: 100%;
-    background: #f5ebeb;
-    border: none;
-    outline: none;
-    text-align: center;
-    color: #222;
-    font-size: 18px;
+	height: 100%;
+	width: 100%;
+	background: #f5ebeb;
+	border: none;
+	outline: none;
+	text-align: center;
+	color: #222;
+	font-size: 18px;
 }
 .p {
-    padding-left: 30px;
+	padding-left: 30px;
 }
 .space {
-    margin-top: 16px;
-    margin-bottom: 16px;
+	margin-top: 16px;
+	margin-bottom: 16px;
 }
 
 .show {
-    position: absolute;
-    right: 25px;
-    font-size: 13px;
-    font-weight: 700;
-    color: #222;
-    display: none;
-    cursor: pointer;
+	position: absolute;
+	right: 25px;
+	font-size: 13px;
+	font-weight: 700;
+	color: #222;
+	display: none;
+	cursor: pointer;
 }
 
-.pass:valid~.show {
-    display: block;
+.pass:valid ~ .show {
+	display: block;
 }
 
-button[type="submit"] {
-    background: #D052F6;
-    border: 1px solid #D052F6;
-    border-radius: 0px;
-    color: white;
-    font-size: 18px;
-    letter-spacing: 1px;
-    font-weight: 400;
-    cursor: pointer;
-    transition: .3s ease;
-    width: 100%;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+button[type='submit'] {
+	background: #d052f6;
+	border: 1px solid #d052f6;
+	border-radius: 0px;
+	color: white;
+	font-size: 18px;
+	letter-spacing: 1px;
+	font-weight: 400;
+	cursor: pointer;
+	transition: 0.3s ease;
+	width: 100%;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-button[type="submit"]:hover {
-    background: #D052F690;
-    border: 1px solid #D052F690;
+button[type='submit']:hover {
+	background: #d052f690;
+	border: 1px solid #d052f690;
 }
 
 .login {
-    color: white;
-    margin: 20px 0;
+	color: white;
+	margin: 20px 0;
 }
 
 .pop {
-    width: 200px;
-    height: 0px;
-    display: flex;
-    background-color: rgb(255, 255, 255);
-    align-items: center;
-    justify-content: center;
-    color: rgb(3, 3, 3, 0);
-    position: absolute;
-    text-align: center;
-    left: 43%;
-    top: 0;
-    border-radius: 0px 0px 10px 10px;
-    z-index: 1000;
-    transition: height 1s, color .1s .25s;
+	width: 200px;
+	height: 0px;
+	display: flex;
+	background-color: rgb(255, 255, 255);
+	align-items: center;
+	justify-content: center;
+	color: rgb(3, 3, 3, 0);
+	position: absolute;
+	text-align: center;
+	left: 43%;
+	top: 0;
+	border-radius: 0px 0px 10px 10px;
+	z-index: 1000;
+	transition: height 1s, color 0.1s 0.25s;
 }
 .active {
-    position: fixed;
-    height: 100px;
-    color: rgb(3, 3, 3, 1);
+	position: fixed;
+	height: 100px;
+	color: rgb(3, 3, 3, 1);
 }
 .lds-facebook {
 	display: none;
@@ -190,27 +195,25 @@ button[type="submit"]:hover {
 		top: 24px;
 		height: 32px;
 	}
-
-
 }
 .pop {
-    width: 200px;
-    height: 0px;
-    display: flex;
-    background-color: rgb(255, 255, 255);
-    align-items: center;
-    justify-content: center;
-    color: rgb(3, 3, 3, 0);
-    position: absolute;
-    text-align: center;
-    left: 43%;
-    top: 0;
-    border-radius: 0px 0px 10px 10px;
-    z-index: 1000;
-    transition: height 1s, color .1s .25s;
+	width: 200px;
+	height: 0px;
+	display: flex;
+	background-color: rgb(255, 255, 255);
+	align-items: center;
+	justify-content: center;
+	color: rgb(3, 3, 3, 0);
+	position: absolute;
+	text-align: center;
+	left: 43%;
+	top: 0;
+	border-radius: 0px 0px 10px 10px;
+	z-index: 1000;
+	transition: height 1s, color 0.1s 0.25s;
 }
 .active {
-    position: fixed;
-    height: 100px;
-    color: rgb(3, 3, 3, 1);
+	position: fixed;
+	height: 100px;
+	color: rgb(3, 3, 3, 1);
 }
