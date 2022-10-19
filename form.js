@@ -5,8 +5,6 @@ import validator from 'validator';
 // email check
 const schema = new PasswordValidator();
 schema
-	.is()
-	.min(8)
 	.usingPlugin(validator.isEmail, 'it should be an email')
 	.is()
 	.max(100)
@@ -39,6 +37,9 @@ showBtn.addEventListener('click', function () {
 		showBtn.style.color = '#222';
 	}
 });
+
+// CHECK FORM VALID
+
 form.addEventListener('submit', e => {
 	e.preventDefault();
 	let emailValue = email_field.value;
@@ -51,11 +52,13 @@ form.addEventListener('submit', e => {
 
 	if (schema.validate(emailValue, { details: true }).length !== 0) {
 		email_field.style.borderColor = 'red';
+		email_er.style.color = 'red';
 		email_er.innerText = emailCheckMSG;
 	}
 
 	if (passSchema.validate(passValue, { details: true }).length !== 0) {
 		pass_field.style.borderColor = 'red';
+		pass_er.style.color = 'red';
 		pass_er.innerText = passCheckMSG;
 	}
 

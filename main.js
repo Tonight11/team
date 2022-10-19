@@ -7,6 +7,7 @@ var swiper = new Swiper('.mySwiper', {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
 	},
+	loop: true,
 });
 
 let burger = document.querySelector('.menu__icon');
@@ -20,22 +21,22 @@ if (burger) {
 	});
 }
 
-let current;
-let bg = document.querySelector('.header');
+let next;
+let active = 0;
+let bg = document.querySelectorAll('[data-back]');
 let btnSwip = document.querySelectorAll('.btn-swiper');
 
 btnSwip.forEach(i => {
 	i.addEventListener('click', e => {
-		current = +document.querySelector('.swiper-pagination-current')
-			.innerText;
-		const target = e.target;
-		console.log(current);
-		if (current == 1) {
-			bg.style.backgroundImage = "url('../img/1.jpg')";
-		} else if (current == 2) {
-			bg.style.backgroundImage = "url('../img/bg2.jpg')";
-		} else {
-			bg.style.backgroundImage = "url('../img/bg3.jpg')";
-		}
+		next =
+			+document.querySelector('.swiper-pagination-current').innerText - 1;
+
+		const currentItem = document.querySelector(`[data-index="${active}"]`),
+			nextItem = document.querySelector(`[data-index="${next}"]`);
+
+		currentItem.dataset.back = 'after';
+		nextItem.dataset.back = 'active';
+
+		active = next;
 	});
 });
